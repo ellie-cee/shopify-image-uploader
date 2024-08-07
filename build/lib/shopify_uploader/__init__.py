@@ -1,1 +1,0 @@
-from .uploader import ShopifyUploader
