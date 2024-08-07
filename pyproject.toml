@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools >= 70.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shopify-image-uploader"
+version = "1.0.18"
+dependencies = [
+ "beautifulsoup4",
+ "ShopifyAPI",
+ "jmespath",
+]
+authors = [
+  {name = "eleanor Cassady", email = "ellie@chelseaandrachel.com"},
+]
+description="Upload Images to Shopify"

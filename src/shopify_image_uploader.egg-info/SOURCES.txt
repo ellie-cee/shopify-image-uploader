@@ -1,0 +1,8 @@
+pyproject.toml
+src/shopify_image_uploader.egg-info/PKG-INFO
+src/shopify_image_uploader.egg-info/SOURCES.txt
+src/shopify_image_uploader.egg-info/dependency_links.txt
+src/shopify_image_uploader.egg-info/requires.txt
+src/shopify_image_uploader.egg-info/top_level.txt
+src/shopify_uploader/__init__.py
+src/shopify_uploader/uploader.py
