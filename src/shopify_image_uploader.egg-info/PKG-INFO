@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: shopify-image-uploader
-Version: 1.0.18
+Version: 1.1.1
 Summary: Upload Images to Shopify
 Author-email: eleanor Cassady <ellie@chelseaandrachel.com>
 Requires-Dist: beautifulsoup4

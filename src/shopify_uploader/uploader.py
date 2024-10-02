@@ -8,6 +8,7 @@ import mimetypes
 import base64
 from jmespath import search as jsearch
 import re
+from slugify import slugify
 
 class ShopifyUploader:
     def __init__(self,token,site,apiVersion="2024-07"):
@@ -127,7 +128,7 @@ class ShopifyUploader:
             return self.uploaded[filename]
         res = requests.head(url)
         
-        filename = f'{self.stripSizing(".".join(filename.split(".")[0:-1]))}{mimetypes.guess_extension(res.headers["Content-Type"])}'
+        filename = f'{self.stripSizing(".".join(list(map(lambda x:slugify(x),filename.split(".")[0:-1]))))}{mimetypes.guess_extension(res.headers["Content-Type"])}'
         
 
         uploaded = self.check_upload(filename,url.split("?")[0].split("/")[-1])
@@ -171,7 +172,7 @@ class ShopifyUploader:
         if file is None:
             print(json.dumps(upl,indent=2))
             print(url,filename)
-            sys.exit(0)
+            return None
         
         if not check:
             if file:
